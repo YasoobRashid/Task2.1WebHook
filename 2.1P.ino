@@ -3,7 +3,7 @@
 #include "DHT.h"
 
 #define DHTPIN 2       // Pin where the DHT11 is connected
-#define DHTTYPE DHT11  // DHT 11
+#define DHTTYPE DHT22  // DHT 22
 DHT dht(DHTPIN, DHTTYPE);
 
 char ssid[] = "Jazil's S24";
@@ -24,7 +24,7 @@ void setup() {
   }
   Serial.println("\nConnected to Wi-Fi");
   
-  ThingSpeak.begin(client);  // Initialize ThingSpeak
+  ThingSpeak.begin(client);  
 }
 
 void loop() {
@@ -53,5 +53,5 @@ void loop() {
     Serial.println("Error sending data to ThingSpeak");
   }
 
-  delay(60000);  // Wait 60 seconds before sending the next update
+  delay(60000);  
 }
