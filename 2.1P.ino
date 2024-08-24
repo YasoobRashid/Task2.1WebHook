@@ -2,7 +2,7 @@
 #include "ThingSpeak.h"
 #include "DHT.h"
 
-#define DHTPIN 2       // Pin where the DHT11 is connected
+#define DHTPIN 2       // Pin where the DHT22 is connected
 #define DHTTYPE DHT22  // DHT 22
 DHT dht(DHTPIN, DHTTYPE);
 
